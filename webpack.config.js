@@ -1,6 +1,7 @@
 let path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin =require('copy-webpack-plugin');
 
 let conf = {
   entry: './src/index.js',
@@ -53,7 +54,13 @@ let conf = {
       filename: 'index.html',
       template: path.resolve(__dirname, './src/index.pug')
     }),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles.css'),
+    new CopyWebpackPlugin([
+      {
+        from: './src/fonts',
+        to: './fonts'
+      }
+    ]),
   ]
 
 };
