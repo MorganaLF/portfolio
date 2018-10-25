@@ -1,0 +1,31 @@
+@import  "././variables.styl"
+
+.personal-data
+  padding-top: 12px
+  text-align: center
+  &__picture
+    display: inline-block
+    width: 100%
+    max-width: 240px
+    //background: blue
+    margin: 0 0 22px 23px
+    border-radius: 50%
+    border 1px solid blue
+    overflow: hidden
+    &:after
+      content ''
+      padding-top: 100%
+      float: left
+  &__name
+    font-size 54px
+    font-weight: 300
+    text-transform uppercase
+  &__surname
+    font-size 64px
+    font-weight: 600
+    line-height: 1
+    text-transform uppercase
+  &__profession
+    font-size 26px
+    font-weight 600
+    text-transform uppercase
