@@ -59,6 +59,10 @@ let conf = {
       {
         from: './src/fonts',
         to: './fonts'
+      },
+      {
+        from: './src/images',
+        to: './images'
       }
     ]),
   ]
