@@ -1,4 +1,5 @@
-.subtitle-group
-    .subtitle-group__icon
-    h2.subtitle-group__title PROFILE
-    .subtitle-group__line
+mixin title(titleText)
+    .subtitle-group
+        div(class!='subtitle-group__icon '+attributes.class)
+        h2.subtitle-group__title= titleText
+        .subtitle-group__line
