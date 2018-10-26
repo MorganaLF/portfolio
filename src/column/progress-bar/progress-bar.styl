@@ -1,0 +1,25 @@
+@import "/../../stylus/variables"
+
+.progress-bar
+  &__title
+    margin: 0 0 5px 8px
+    font-size 27px
+    text-align: center
+  &__indicator
+    display: flex
+    &--item
+      width: 5.76%
+      margin: 0 1.5% 24px
+      border-radius: 50%
+      background: grey
+      overflow: hidden
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      &:before
+        content: ''
+        float: left
+        padding-top: 100%
+      &_full
+        background: accent-color
