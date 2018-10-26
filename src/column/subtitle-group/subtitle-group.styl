@@ -1,12 +1,22 @@
+@import  "././variables.styl"
+
 .subtitle-group
   display: flex
   align-items center
+  margin-left: 3px
   &__icon
-    width: 76px
-    height: 74px
+    flex-basis: 76px
+    flex-shrink: 0
+    margin-right: 10px
     background: url("/images/PROFILE_ICON.png") no-repeat center center
     background-size: contain
+    overflow: hidden
+    &:before
+      content: ''
+      padding-top: 100%
+      float: left
   &__title
+    margin: 6px 9px 0 0
     font-size 42px
     font-weight: 600
     color: accent-color

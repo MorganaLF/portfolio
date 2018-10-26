@@ -11,7 +11,10 @@ let conf = {
     publicPath: "/"
   },
   devServer: {
-    overlay: true
+    overlay: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
   },
   module: {
     rules: [
@@ -64,7 +67,7 @@ let conf = {
         from: './src/images',
         to: './images'
       }
-    ]),
+    ])
   ]
 
 };
