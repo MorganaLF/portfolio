@@ -1,0 +1,31 @@
+.bulleted-list
+  padding: 28px 0 0 16px
+  list-style-type: none
+  &__item
+    position: relative
+    margin-bottom: 16px
+    padding-left: 42px
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 3px
+      left: 0
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background: black
+      line-height: 0
+    &--title
+      display: inline-block
+      margin: 0 13px 2px 0
+      font-size 27px
+      color: accent-color
+    &--date
+      display: inline-block
+      font-size 27px
+      color: light-black
+    &--subtitle
+      margin-bottom: 4px
+      font-size 27px
+      font-weight: 400
