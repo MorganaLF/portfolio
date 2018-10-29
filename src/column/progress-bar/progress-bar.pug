@@ -1,61 +1,14 @@
-.progress-bar.skills__progress-bar
-    .progress-bar__item
-        .progress-bar__title CREATIVE
-        .progress-bar__indicator
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-    .progress-bar__item
-        .progress-bar__title TEAMWORK
-        .progress-bar__indicator
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item
-    .progress-bar__item
-        .progress-bar__title INNOVATE
-        .progress-bar__indicator
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-            .progress-bar__indicator--item
-    .progress-bar__item
-        .progress-bar__title COMMUNICATION
-        .progress-bar__indicator
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item.progress-bar__indicator--item_full
-            .progress-bar__indicator--item
+mixin progressBar(options)
+        each barItem in options.barItems
+            .progress-bar__item
+                .progress-bar__title= barItem.title
+                if options.type === 'circles'
+                    .progress-bar__indicator
+                        - for(var i = 0; i < barItem.progressLength; i++)
+                            if i < barItem.progressFull
+                                .progress-bar__indicator--item.progress-bar__indicator--item_full
+                            else
+                                .progress-bar__indicator--item
+                else
+                    .progress-bar__indicator.progress-bar__indicator_style_line
+                        .progress-bar__indicator_full(style="width:" + barItem.progressFull + "%")
