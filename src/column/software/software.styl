@@ -15,3 +15,21 @@
       &:last-child
         margin-left: 2.25rem
 
+@media screen and (max-width: 800px)
+  .software
+    .subtitle-group
+      &__icon
+        margin-right: 0.625rem
+
+@media screen and (max-width: 600px)
+  .software
+    &__progress-bar
+      flex-direction: column
+      align-items center
+      &--col
+        width: 100%
+        //max-width: 332px
+        &:first-child
+          margin-right: 0
+        &:last-child
+          margin-left: 0

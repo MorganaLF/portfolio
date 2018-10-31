@@ -25,6 +25,10 @@
 *
   margin 0
   padding 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
 img
   max-width: 100%
 
@@ -48,5 +52,16 @@ body
   &_weight_bold
     font-weight: 600
 
+@media screen and (max-width: 1024px)
+  html
+    font-size: 14px
 
+@media screen and (max-width: 800px)
+  .wrapper
+    flex-direction: column
+    align-items center
+
+@media screen and (max-width: 400px)
+  html
+    font-size: 12px
 
