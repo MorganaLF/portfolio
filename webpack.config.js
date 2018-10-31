@@ -5,11 +5,6 @@ const CopyWebpackPlugin =require('copy-webpack-plugin');
 
 let conf = {
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: "main.js",
-    publicPath: "https://morganalf.github.io/portfolio/dist/"
-  },
   devServer: {
     overlay: true,
     watchOptions: {
@@ -42,6 +37,13 @@ module.exports = (env, options) => {
   conf.devtool = production ? false : "eval-sourcemap";
 
   let cssMap = !production;
+  let public = production ? "https://morganalf.github.io/portfolio/dist/" : "/";
+
+  conf.output = {
+    path: path.resolve(__dirname, './dist'),
+        filename: "main.js",
+        publicPath: public
+  }
 
   conf.module = {
     rules: [
