@@ -16,42 +16,6 @@ let conf = {
       ignored: /node_modules/
     }
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: '/node_modules/'
-      },
-      {
-        test: /\.styl$/,
-        use: [
-          ExtractTextPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'stylus-loader'
-        ]
-      },
-      {
-        test: /\.pug$/,
-        loader: 'pug-loader',
-        options: {
-          pretty: true
-        }
-      },
-      {
-        test: /\.(ttf|woff|svg)$/,
-        use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'fonts/[name].[ext]'
-              }
-            }
-          ]
-      }
-    ]
-  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -76,6 +40,55 @@ module.exports = (env, options) => {
   let production = options.mode === "production";
 
   conf.devtool = production ? false : "eval-sourcemap";
+
+  let cssMap = !production;
+
+  conf.module = {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/'
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          ExtractTextPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: cssMap
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: cssMap ? 'inline' : false
+            }
+          },
+          'stylus-loader'
+        ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+      },
+      {
+        test: /\.(ttf|woff|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]'
+            }
+          }
+        ]
+      }
+    ]
+  };
 
   return conf;
 };
