@@ -7,8 +7,12 @@ module.exports = {
         test: /\.styl$/,
         use: [
             ExtractTextPlugin.loader,
-            'css-loader',
-            'postcss-loader',
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader'
+            },
             'stylus-loader'
         ]
       }
