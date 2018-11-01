@@ -37,13 +37,13 @@ module.exports = (env, options) => {
   conf.devtool = production ? false : "eval-sourcemap";
 
   let cssMap = !production;
-  let public = production ? "https://morganalf.github.io/portfolio/dist/" : "/";
+  let publicDir = production ? "https://morganalf.github.io/portfolio/dist/" : "/";
 
   conf.output = {
     path: path.resolve(__dirname, './dist'),
         filename: "main.js",
-        publicPath: public
-  }
+        publicPath: publicDir
+  };
 
   conf.module = {
     rules: [
@@ -59,7 +59,8 @@ module.exports = (env, options) => {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: cssMap
+              sourceMap: cssMap,
+              url: false
             }
           },
           {
