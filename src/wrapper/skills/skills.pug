@@ -1,31 +1,32 @@
 section.skills
     include ../subtitle-group/subtitle-group
     +title('skills')(class="subtitle-group__icon_skills")
-    .progress-bar.skills__progress-bar
-        include ../progress-bar/progress-bar
-        +progressBar({
-            class: 'skills__progress-bar',
-            type: 'circles',
-            barItems: [
-              {
-                title: 'CREATIVE',
-                progressLength: 12,
-                progressFull: 9
-              },
-              {
-                title: 'TEAMWORK',
-                progressLength: 12,
-                progressFull: 11
-              },
-              {
-                title: 'INNOVATE',
-                progressLength: 12,
-                progressFull: 6
-              },
-              {
-                title: 'COMMUNICATION',
-                progressLength: 12,
-                progressFull: 11
-              }
-            ]
-        })
+    .skills__progress-bar
+        .progress-bar
+            include ../progress-bar/progress-bar
+            +progressBar({
+                class: 'skills__progress-bar',
+                type: 'circles',
+                barItems: [
+                  {
+                    title: 'CREATIVE',
+                    progressLength: 12,
+                    progressFull: 9
+                  },
+                  {
+                    title: 'TEAMWORK',
+                    progressLength: 12,
+                    progressFull: 11
+                  },
+                  {
+                    title: 'INNOVATE',
+                    progressLength: 12,
+                    progressFull: 6
+                  },
+                  {
+                    title: 'COMMUNICATION',
+                    progressLength: 12,
+                    progressFull: 11
+                  }
+                ]
+            })
