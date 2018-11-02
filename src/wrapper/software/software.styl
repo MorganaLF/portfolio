@@ -6,8 +6,9 @@
     margin-bottom: 0.7rem
     text-align: left
   &__progress-bar
-    margin: 1.75rem 0 0 0.5625rem
-    display: flex
+    &--container
+      margin: 1.75rem 0 0 0.5625rem
+      display: flex
     &--col
       width: 50%
       &:first-child
@@ -24,8 +25,9 @@
 @media screen and (max-width: 600px)
   .software
     &__progress-bar
-      flex-direction: column
-      align-items center
+      &--container
+        flex-direction: column
+        align-items center
       &--col
         width: 100%
         //max-width: 332px
