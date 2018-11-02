@@ -2,6 +2,8 @@
   .subtitle-group
     &__icon
       margin-right: 1.375rem
+      +md()
+        margin-right: 0.625rem
   .progress-bar__title
     margin-bottom: 0.7rem
     text-align: left
@@ -9,29 +11,37 @@
     &--container
       margin: 1.75rem 0 0 0.5625rem
       display: flex
-    &--col
-      width: 50%
-      &:first-child
-        margin-right: 2.25rem
-      &:last-child
-        margin-left: 2.25rem
-
-@media screen and (max-width: 800px)
-  .software
-    .subtitle-group
-      &__icon
-        margin-right: 0.625rem
-
-@media screen and (max-width: 600px)
-  .software
-    &__progress-bar
-      &--container
+      +xs()
         flex-direction: column
         align-items center
-      &--col
+    &--col
+      width: 50%
+      +xs()
         width: 100%
-        //max-width: 332px
-        &:first-child
+      &:first-child
+        margin-right: 2.25rem
+        +xs()
           margin-right: 0
-        &:last-child
+      &:last-child
+        margin-left: 2.25rem
+        +xs()
           margin-left: 0
+//@media screen and (max-width: 800px)
+//  .software
+//    .subtitle-group
+//      &__icon
+//        margin-right: 0.625rem
+
+//@media screen and (max-width: 600px)
+//  .software
+//    &__progress-bar
+//      &--container
+//        flex-direction: column
+//        align-items center
+//      &--col
+//        width: 100%
+//        ////max-width: 332px
+//        &:first-child
+//          margin-right: 0
+//        &:last-child
+//          margin-left: 0

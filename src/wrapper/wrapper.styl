@@ -4,6 +4,9 @@
   margin 0 auto
   padding: 78px 0
   //border: 1px solid black
+  +sm()
+    flex-direction column
+    align-items center
   &__column
     flex-shrink 0
     padding-left: one-side-column-indent
@@ -16,14 +19,16 @@
       width: calc(59.02%)
   &__personal-data-container
     padding: 0.75rem 0 4.88rem 1.25rem
+    +sm()
+      padding-left: 0
   &__profile-container
     padding-bottom: 2.875rem
 
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: $sm)
   .wrapper
-    flex-direction: column
-    align-items center
+    //flex-direction: column
+    //align-items center
     &__column
       &_size_4,
       &_size_6
@@ -31,6 +36,6 @@
         max-width: 600px
         padding-left: 20px
         padding-right: 20px
-    &__personal-data-container
-      padding-left: 0
+    //&__personal-data-container
+    //  padding-left: 0
 

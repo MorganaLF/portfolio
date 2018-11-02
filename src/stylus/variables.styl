@@ -9,3 +9,24 @@ light-black = #020202
 
 column-indent = 6.3%
 one-side-column-indent = column-indent / 2
+
+/* Media */
+
+$md = 1024px
+$sm = 800px
+$xs = 600px
+
+/* Mixins */
+
+md()
+  @media screen and (max-width: $md)
+    {block}
+
+sm()
+  @media screen and (max-width: $sm)
+    {block}
+
+xs()
+  @media screen and (max-width: $xs)
+    {block}
+

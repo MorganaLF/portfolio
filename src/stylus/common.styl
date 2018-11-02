@@ -34,6 +34,8 @@ img
 
 html
   font-size: 16px
+  +md()
+    font-size: 14px
 
 body
   font-family 'MyriadPro', sans-serif
@@ -47,9 +49,10 @@ body
   &_weight_bold
     font-weight: 600
 
-@media screen and (max-width: 1024px)
-  html
-    font-size: 14px
+
+//@media screen and (max-width: 1024px)
+//  html
+//    font-size: 14px
 
 @media screen and (max-width: 400px)
   html
