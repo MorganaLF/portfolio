@@ -1,16 +1,5 @@
 section.contact
     include ../subtitle-group/subtitle-group
     +title('contact')(class="subtitle-group__icon_phone")
-    .contact__list
-        .contact__list--row
-            h3.contact__list--title ADDRESS
-            .contact__list--text Main Street, City.
-        .contact__list--row
-            h3.contact__list--title E-MAIL
-            .contact__list--text contact@domain.com
-        .contact__list--row
-            h3.contact__list--title PHONE
-            .contact__list--text 555-555-555
-        .contact__list--row
-            h3.contact__list--title WEBSITE
-            .contact__list--text www.yourweb.com
+    .contact__contact-list-container
+        include ../contact-list/contact-list
