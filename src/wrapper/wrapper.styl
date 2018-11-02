@@ -3,11 +3,13 @@
   max-width 1232px
   margin 0 auto
   padding: 78px 0
+  border: 1px solid black
   &__column
     flex-shrink 0
     padding-left: one-side-column-indent
     padding-right one-side-column-indent
     box-sizing: border-box
+    border: 1px solid black
     &_size_4
       width: calc(40.98%)
       //width: "calc(40.8% - %s)" % wrapper-indent
@@ -18,6 +20,9 @@
       //width: "calc(59.2% - %s)" % wrapper-indent
       //margin: 0 one-side-wrapper-indent
       //background: rgba(0, 0, 0, 0.5)
+  &__personal-data-container
+    padding: 0.75rem 0 4.88rem 1.25rem
+
 
 @media screen and (max-width: 800px)
   .wrapper
@@ -30,4 +35,6 @@
         max-width: 600px
         padding-left: 20px
         padding-right: 20px
+    &__personal-data-container
+      padding-left: 0
 
