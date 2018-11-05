@@ -1,7 +1,7 @@
 mixin education
   section.education
       include ../subtitle-group/subtitle-group
-      +title('education')(class="subtitle-group__icon_star")
+      +title('education', 'star', 'education__subtitle-group--icon')
       .education__bulleted-list-container
         include ../bulleted-list/bulleted-list
         +bulletedList({
