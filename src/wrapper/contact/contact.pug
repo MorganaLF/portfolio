@@ -1,5 +1,7 @@
-section.contact
-    include ../subtitle-group/subtitle-group
-    +title('contact')(class="subtitle-group__icon_phone")
-    .contact__contact-list-container
-        include ../contact-list/contact-list
+mixin contact
+    section.contact
+        include ../subtitle-group/subtitle-group
+        +title('contact')(class="subtitle-group__icon_phone")
+        .contact__contact-list-container
+            include ../contact-list/contact-list
+            +contact-list
