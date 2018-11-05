@@ -2,10 +2,10 @@ mixin progressBar(options)
     .progress-bar
         each barItem in options.barItems
             .progress-bar__item
-                .progress-bar__title= barItem.title
+                .progress-bar__title(class=options.titleClass)= barItem.title
                 if options.type === 'circles'
                     .progress-bar__indicator
-                        - for(var i = 0; i < barItem.progressLength; i++)
+                        - for (var i = 0; i < options.progressLength; i++)
                             if i < barItem.progressFull
                                 .progress-bar__indicator--item.progress-bar__indicator--item_full
                             else
