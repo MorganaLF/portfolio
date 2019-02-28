@@ -46,3 +46,12 @@ fontFace(family, style, weight, file)
     url(fontUrl(file + '.woff')) format('woff'),
     url(fontUrl(file + '.ttf')) format('ttf')
 
+/* Adaptive square */
+
+square()
+  overflow: hidden
+  &:after
+    content ''
+    padding-top: 100%
+    float: left
+
