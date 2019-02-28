@@ -54,23 +54,37 @@ module.exports = (env, options) => {
       },
       {
         test: /\.styl$/,
-        use: [
-          ExtractTextPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: cssMap,
-              url: false
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: cssMap ? 'inline' : false
-            }
-          },
-          'stylus-loader'
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: cssMap,
+                url: false
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: cssMap ? 'inline' : false,
+                plugins: function() {
+                  if (production) {
+                    return [
+                      require('autoprefixer'),
+                      require('cssnano')
+                    ]
+                  } else {
+                    return [
+                      require('autoprefixer')
+                    ]
+                  }
+                }
+              }
+            },
+            'stylus-loader'
+          ]
+        })
       },
       {
         test: /\.pug$/,
