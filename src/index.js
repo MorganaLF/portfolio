@@ -1,2 +1,2 @@
-import css from './stylus/main.styl';
+import css from './styles/main.styl';
 
