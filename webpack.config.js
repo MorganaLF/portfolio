@@ -23,8 +23,14 @@ let conf = {
         to: './fonts'
       },
       {
-        from: './src/images',
-        to: './images'
+        from: './src/**/*.jpg',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/**/*.png',
+        to: './images',
+        flatten: true
       }
     ])
   ]
