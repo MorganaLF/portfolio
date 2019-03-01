@@ -1,28 +1,28 @@
 mixin skills
-    section.skills
-        include ../subtitle-group/subtitle-group
-        +title('skills', 'skills')
-        .skills__progress-bar
-                include ../progress-bar/progress-bar
-                +progressBar({
-                    type: 'circles',
-                    progressLength: 12,
-                    barItems: [
-                      {
-                        title: 'CREATIVE',
-                        progressFull: 9
-                      },
-                      {
-                        title: 'TEAMWORK',
-                        progressFull: 11
-                      },
-                      {
-                        title: 'INNOVATE',
-                        progressFull: 6
-                      },
-                      {
-                        title: 'COMMUNICATION',
-                        progressFull: 11
-                      }
-                    ]
-                })
+  section.skills
+    include ../subtitle-group/subtitle-group
+    +title('skills', 'skills')
+    .skills__progress-bar
+      include ../progress-bar/progress-bar
+      +progressBar({
+        type: 'circles',
+        progressLength: 12,
+        barItems: [
+          {
+            title: 'CREATIVE',
+            progressFull: 9
+          },
+          {
+            title: 'TEAMWORK',
+            progressFull: 11
+          },
+          {
+            title: 'INNOVATE',
+            progressFull: 6
+          },
+          {
+            title: 'COMMUNICATION',
+            progressFull: 11
+          }
+        ]
+      })
