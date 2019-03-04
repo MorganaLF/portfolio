@@ -1,23 +1,23 @@
 mixin software
   section.software
     include ../subtitle-group/subtitle-group
-    +title('software', 'computer', 'software__subtitle-group--icon')
+    +title("software", "computer", "software__subtitle-group--icon")
     .software__progress-bar--container
       .software__progress-bar--col
         include ../progress-bar/progress-bar
         +progressBar({
-          titleClass: 'software__progress-bar--title',
+          titleClass: "software__progress-bar--title",
           barItems: [
             {
-              title: 'PHOTOSHOP',
+              title: "PHOTOSHOP",
               progressFull: 91
             },
             {
-              title: 'ILLUSTRATOR',
+              title: "ILLUSTRATOR",
               progressFull: 71
             },
             {
-              title: 'INDESIGN',
+              title: "INDESIGN",
               progressFull: 56.5
             }
           ]
@@ -25,18 +25,18 @@ mixin software
       .software__progress-bar--col
         include ../progress-bar/progress-bar
         +progressBar({
-          titleClass: 'software__progress-bar--title',
+          titleClass: "software__progress-bar--title",
           barItems: [
             {
-              title: 'DREAMWEAVER',
+              title: "DREAMWEAVER",
               progressFull: 84
             },
             {
-              title: 'AFTER EFFECTS',
+              title: "AFTER EFFECTS",
               progressFull: 62
             },
             {
-              title: 'HTML&CSS3',
+              title: "HTML&CSS3",
               progressFull: 92
             }
           ]

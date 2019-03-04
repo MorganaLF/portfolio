@@ -4,9 +4,9 @@ mixin bulletedList(options)
       li.bulleted-list__item
         span.bulleted-list__item--title(class=
         options.isColoredTitle ?
-            'bulleted-list__item--title_color_accent':''
+            "bulleted-list__item--title_color_accent":""
         )= listItem.title
-        span.bulleted-list__item--date= '// ' + listItem.date
+        span.bulleted-list__item--date= "// " + listItem.date
         span.bulleted-list__item--subtitle= listItem.subtitle
         p.main-text.bulleted-list__item--paragraph= listItem.text
 

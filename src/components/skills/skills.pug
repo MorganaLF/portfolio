@@ -1,27 +1,27 @@
 mixin skills
   section.skills
     include ../subtitle-group/subtitle-group
-    +title('skills', 'skills')
+    +title("skills", "skills")
     .skills__progress-bar
       include ../progress-bar/progress-bar
       +progressBar({
-        type: 'circles',
+        type: "circles",
         progressLength: 12,
         barItems: [
           {
-            title: 'CREATIVE',
+            title: "CREATIVE",
             progressFull: 9
           },
           {
-            title: 'TEAMWORK',
+            title: "TEAMWORK",
             progressFull: 11
           },
           {
-            title: 'INNOVATE',
+            title: "INNOVATE",
             progressFull: 6
           },
           {
-            title: 'COMMUNICATION',
+            title: "COMMUNICATION",
             progressFull: 11
           }
         ]
