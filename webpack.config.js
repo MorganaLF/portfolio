@@ -11,32 +11,7 @@ let conf = {
     watchOptions: {
       ignored: /node_modules/
     }
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, './src/index.pug')
-    }),
-    new ExtractTextPlugin('styles.css'),
-    new CopyWebpackPlugin([
-      {
-        from: './src/fonts',
-        to: './fonts'
-      },
-      {
-        from: './src/**/*.jpg',
-        to: './images',
-        flatten: true
-      },
-      {
-        from: './src/**/*.png',
-        to: './images',
-        flatten: true
-      }
-    ])
-  ]
-
+  }
 };
 
 module.exports = (env, options) => {
@@ -46,6 +21,7 @@ module.exports = (env, options) => {
 
   let cssMap = !production;
   let publicDir = production ? "https://morganalf.github.io/resume/dist/" : "/";
+  let cleanDist = production ? new CleanWebpackPlugin() : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: []});
 
   conf.output = {
     path: path.resolve(__dirname, './dist'),
@@ -114,6 +90,36 @@ module.exports = (env, options) => {
       }
     ]
   };
+
+  conf.plugins = [
+    cleanDist,
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, './src/index.pug')
+    }),
+    new ExtractTextPlugin('styles.css'),
+    new CopyWebpackPlugin([
+      {
+        from: './src/fonts',
+        to: './fonts'
+      },
+      {
+        from: './src/components/**/*.jpg',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/components/**/*.png',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/favicons/**/*.*',
+        to: './',
+        flatten: true
+      }
+    ])
+  ];
 
   return conf;
 };
