@@ -1,21 +1,21 @@
+include ../personal-data/personal-data
+include ../profile/profile
+include ../contact/contact
+include ../skills/skills
+include ../education/education
+include ../experience/experience
+include ../software/software
+
 mixin wrapper
   main.wrapper
     .wrapper__column.wrapper__column_size_4
       .wrapper__personal-data-container
-        include ../personal-data/personal-data
         +personal-data
       .wrapper__profile-container
-        include ../profile/profile
         +profile
-      include ../contact/contact
       +contact
-      include ../skills/skills
       +skills
-
     .wrapper__column.wrapper__column_size_6
-      include ../education/education
       +education
-      include ../experience/experience
       +experience
-      include ../software/software
       +software

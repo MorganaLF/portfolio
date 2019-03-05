@@ -1,10 +1,11 @@
+include ../subtitle-group/subtitle-group
+include ../progress-bar/progress-bar
+
 mixin software
   section.software
-    include ../subtitle-group/subtitle-group
     +title("software", "computer", "software__subtitle-group--icon")
     .software__progress-bar--container
       .software__progress-bar--col
-        include ../progress-bar/progress-bar
         +progressBar({
           titleClass: "software__progress-bar--title",
           barItems: [
@@ -23,7 +24,6 @@ mixin software
           ]
         })
       .software__progress-bar--col
-        include ../progress-bar/progress-bar
         +progressBar({
           titleClass: "software__progress-bar--title",
           barItems: [

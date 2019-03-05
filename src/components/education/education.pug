@@ -1,9 +1,10 @@
+include ../subtitle-group/subtitle-group
+include ../bulleted-list/bulleted-list
+
 mixin education
   section.education
-    include ../subtitle-group/subtitle-group
     +title("education", "star", "education__subtitle-group--icon")
     .education__bulleted-list-container
-      include ../bulleted-list/bulleted-list
       +bulletedList({
         isColoredTitle: true,
         listItems: [

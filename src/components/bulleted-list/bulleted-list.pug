@@ -2,9 +2,9 @@ mixin bulletedList(options)
   ul.bulleted-list
     each listItem in options.listItems
       li.bulleted-list__item
-        span.bulleted-list__item--title(class=
-        options.isColoredTitle ?
-            "bulleted-list__item--title_color_accent":""
+        span.bulleted-list__item--title(
+          class=options.isColoredTitle ?
+                  "bulleted-list__item--title_color_accent":""
         )= listItem.title
         span.bulleted-list__item--date= "// " + listItem.date
         span.bulleted-list__item--subtitle= listItem.subtitle

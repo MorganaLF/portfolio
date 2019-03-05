@@ -1,9 +1,10 @@
+include ../subtitle-group/subtitle-group
+include ../bulleted-list/bulleted-list
+
 mixin experience
   section.experience
-    include ../subtitle-group/subtitle-group
     +title("experience", "portfolio", "experience__subtitle-group--icon")
     .experience__bulleted-list-container
-      include ../bulleted-list/bulleted-list
       +bulletedList({
         listItems: [
           {
