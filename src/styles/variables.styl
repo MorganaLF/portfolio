@@ -13,8 +13,9 @@ one-side-column-indent = column-indent / 2
 /* Media */
 
 $md = 1024px
-$sm = 800px
+$sm = 860px
 $xs = 600px
+$xxs = 400px
 
 /* Font-size */
 root-font-size = 16px
@@ -38,6 +39,10 @@ sm()
 
 xs()
   @media screen and (max-width $xs)
+    {block}
+
+xxs()
+  @media screen and (max-width $xxs)
     {block}
 
 /* Font-Face */
