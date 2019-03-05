@@ -47,17 +47,17 @@ xxs()
 
 /* Font-Face */
 
-fontUrl(file)
+font-url(file)
   return 'fonts/' + file
 
-fontFace(family, style, weight, file)
+font-face(family, style, weight, file)
   @font-face
     font-family family
     font-style style
     font-weight weight
-    src url(fontUrl(file + '.svg')) format('svg'),
-    url(fontUrl(file + '.woff')) format('woff'),
-    url(fontUrl(file + '.ttf')) format('ttf')
+    src url(font-url(file + '.svg')) format('svg'),
+    url(font-url(file + '.woff')) format('woff'),
+    url(font-url(file + '.ttf')) format('ttf')
 
 /* Adaptive square */
 
