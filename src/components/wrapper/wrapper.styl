@@ -1,9 +1,10 @@
 .wrapper
   display flex
+  width: 100%
   max-width 1232px
+  min-width: 320px
   margin 0 auto
-  padding 78px 0
-  //border 1px solid black
+  padding rem(78px) 0
   +sm()
     flex-direction column
     align-items center
@@ -12,30 +13,21 @@
     padding-left one-side-column-indent
     padding-right one-side-column-indent
     box-sizing border-box
-    //border 1px solid black
     &_size_4
-      width calc(40.98%)
+      width 40.98%
     &_size_6
-      width calc(59.02%)
+      width 59.02%
+    &_size_4
+    &_size_6
+      +sm()
+        width 100%
+        max-width 600px
+        padding-left rem(20px)
+        padding-right rem(20px)
   &__personal-data-container
-    padding 0.75rem 0 4.88rem 1.25rem
+    padding rem(12px) 0 rem(78px) rem(20px)
     +sm()
       padding-left 0
   &__profile-container
-    padding-bottom 2.875rem
-
-
-@media screen and (max-width $sm)
-  .wrapper
-    //flex-direction column
-    //align-items center
-    &__column
-      &_size_4,
-      &_size_6
-        width 100%
-        max-width 600px
-        padding-left 20px
-        padding-right 20px
-    //&__personal-data-container
-    //  padding-left 0
+    padding-bottom rem(46px)
 

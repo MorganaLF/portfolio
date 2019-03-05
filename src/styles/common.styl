@@ -13,9 +13,11 @@ img
   max-width 100%
 
 html
-  font-size 16px
+  font-size root-font-size
   +md()
     font-size 14px
+  @media screen and (max-width 400px)
+    font-size 12px
 
 body
   font-family 'MyriadPro', sans-serif
@@ -23,17 +25,9 @@ body
   font-weight 400
 
 .main-text
-  //font-size 16px
   font-weight 400
   line-height 1.2
   &_weight_bold
     font-weight 600
 
-//@media screen and (max-width 1024px)
-//  html
-//    font-size 14px
-
-@media screen and (max-width 400px)
-  html
-    font-size 12px
 
