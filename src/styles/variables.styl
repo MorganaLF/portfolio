@@ -21,15 +21,15 @@ $xs = 600px
 /* Media mixin */
 
 md()
-  @media screen and (max-width: $md)
+  @media screen and (max-width $md)
     {block}
 
 sm()
-  @media screen and (max-width: $sm)
+  @media screen and (max-width $sm)
     {block}
 
 xs()
-  @media screen and (max-width: $xs)
+  @media screen and (max-width $xs)
     {block}
 
 /* Font-Face */
@@ -49,16 +49,16 @@ fontFace(family, style, weight, file)
 /* Adaptive square */
 
 square()
-  overflow: hidden
+  overflow hidden
   &:after
     content ''
-    padding-top: 100%
-    float: left
+    padding-top 100%
+    float left
 
 /* Break-word */
 
 break-word()
-  overflow-wrap: break-word
-  word-wrap: break-word
-  hyphens: auto
+  overflow-wrap break-word
+  word-wrap break-word
+  hyphens auto
 
