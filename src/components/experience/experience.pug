@@ -1,11 +1,11 @@
 include ../subtitle-group/subtitle-group
-include ../bulleted-list/bulleted-list
+include ../unordered-list/unordered-list
 
 mixin experience
   section.experience
     +title("experience", "portfolio", "experience__subtitle-group--icon")
-    .experience__bulleted-list-container
-      +bulletedList({
+    .experience__unordered-list-container
+      +unorderedList({
         listItems: [
           {
             "title": "company name",

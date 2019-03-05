@@ -1,0 +1,13 @@
+mixin unorderedList(options)
+  ul.unordered-list
+    each listItem in options.listItems
+      li.unordered-list__item
+        span.unordered-list__item--title(
+          class=options.isColoredTitle ?
+                  "unordered-list__item--title_color_accent":""
+        )= listItem.title
+        span.unordered-list__item--date= "// " + listItem.date
+        span.unordered-list__item--subtitle= listItem.subtitle
+        p.main-text.unordered-list__item--paragraph= listItem.text
+
+

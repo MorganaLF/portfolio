@@ -1,11 +1,11 @@
 include ../subtitle-group/subtitle-group
-include ../bulleted-list/bulleted-list
+include ../unordered-list/unordered-list
 
 mixin education
   section.education
     +title("education", "star", "education__subtitle-group--icon")
-    .education__bulleted-list-container
-      +bulletedList({
+    .education__unordered-list-container
+      +unorderedList({
         isColoredTitle: true,
         listItems: [
           {
