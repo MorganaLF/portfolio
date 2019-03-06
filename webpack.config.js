@@ -8,7 +8,6 @@ module.exports = (env, options) => {
   let production = options.mode === 'production';
   let cssMap = !production;
   let publicDir = production ? 'https://morganalf.github.io/resume/dist/' : '/';
-  //let cleanDist = production ? new CleanWebpackPlugin() : new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: []});
 
   return {
     entry: './src/index.js',
