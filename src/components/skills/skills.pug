@@ -3,27 +3,27 @@ include ../progress-bar/progress-bar
 
 mixin skills
   section.skills
-    +title("skills", "skills")
-    .skills__progress-bar
+    +title("skills", "bulb")
+    .skills__progress-bar-container
       +progressBar({
         type: "circles",
         progressLength: 12,
         barItems: [
           {
             title: "creative",
-            progressFull: 9
+            completedProgress: 9
           },
           {
             title: "teamwork",
-            progressFull: 11
+            completedProgress: 11
           },
           {
             title: "innovate",
-            progressFull: 6
+            completedProgress: 6
           },
           {
             title: "communication",
-            progressFull: 11
+            completedProgress: 11
           }
         ]
       })

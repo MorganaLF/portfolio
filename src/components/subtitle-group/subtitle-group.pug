@@ -1,8 +1,8 @@
-mixin title(titleText, icon, iconClasses)
+mixin title(titleText, icon, bigIndent)
   header.subtitle-group
     .subtitle-group__icon(
-      class="subtitle-group__icon_" + icon
-      class=iconClasses
+      class="subtitle-group__icon_with-" + icon
+      class=bigIndent ? "subtitle-group__icon_with-big-indent" : ""
     )
     h2.subtitle-group__title= titleText
     .subtitle-group__line

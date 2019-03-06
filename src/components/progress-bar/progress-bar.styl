@@ -7,19 +7,21 @@
     font-weight 400
     text-align center
     text-transform uppercase
-    &_align_left
-      margin-bottom rem(9px)
+    break-word()
+    &_left-justified
+      margin-bottom rem(11px)
       text-align left
-  &__indicator
-    display flex
+  &__indicator-container
     margin-bottom rem(24px)
-    &_full
-      height 100%
-      background accent-color
-    &_style_line
+    &_solid
       height rem(24px)
       background grey
-    &--item
+    &_rounded
+      display flex
+  &__indicator
+    &_solid
+      height 100%
+    &_rounded
       width 5.55%
       flex-shrink 0
       margin 0 1.5%
@@ -30,6 +32,6 @@
         margin-left 0
       &:last-child
         margin-right 0
-      &_full
-        background accent-color
+    &_full
+      background accent-color
 

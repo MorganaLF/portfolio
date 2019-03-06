@@ -3,41 +3,41 @@ include ../progress-bar/progress-bar
 
 mixin software
   section.software
-    +title("software", "computer", "software__subtitle-group--icon")
-    .software__progress-bar--container
-      .software__progress-bar--col
+    +title("software", "computer", true)
+    .software__progress-bar-container
+      .software__progress-bar-col
         +progressBar({
-          titleClass: "software__progress-bar--title",
+          leftAlign: true,
           barItems: [
             {
               title: "photoshop",
-              progressFull: 91
+              completedProgress: 91
             },
             {
               title: "illustrator",
-              progressFull: 71
+              completedProgress: 71
             },
             {
               title: "indesign",
-              progressFull: 56.5
+              completedProgress: 56.5
             }
           ]
         })
-      .software__progress-bar--col
+      .software__progress-bar-col
         +progressBar({
-          titleClass: "software__progress-bar--title",
+          leftAlign: true,
           barItems: [
             {
               title: "dreamweaver",
-              progressFull: 84
+              completedProgress: 84
             },
             {
               title: "after effects",
-              progressFull: 62
+              completedProgress: 62
             },
             {
               title: "html&css3",
-              progressFull: 92
+              completedProgress: 92
             }
           ]
         })
