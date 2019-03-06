@@ -48,23 +48,23 @@ xxs()
 /* Font-Face */
 
 font-url(file)
-  return 'fonts/' + file
+  return "fonts/" + file
 
 font-face(family, style, weight, file)
   @font-face
     font-family family
     font-style style
     font-weight weight
-    src url(font-url(file + '.svg')) format('svg'),
-    url(font-url(file + '.woff')) format('woff'),
-    url(font-url(file + '.ttf')) format('ttf')
+    src url(font-url(file + ".svg")) format("svg"),
+    url(font-url(file + ".woff")) format("woff"),
+    url(font-url(file + ".ttf")) format("ttf")
 
 /* Adaptive square */
 
 square()
   overflow hidden
   &:after
-    content ''
+    content ""
     padding-top 100%
     float left
 
