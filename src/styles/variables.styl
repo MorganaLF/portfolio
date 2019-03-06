@@ -1,33 +1,33 @@
-/* Colors */
+// Colors
 
 accent-color = #3d6cb0
 black = #000000
 grey = #e6e6e6
 light-black = #020202
 
-/* indents */
+// indents
 
 column-indent = 6.3%
 one-side-column-indent = column-indent / 2
 
-/* Media */
+// Media
 
 $md = 1024px
 $sm = 860px
 $xs = 600px
 $xxs = 400px
 
-/* Font-size */
+// Font-size
 root-font-size = 16px
 
-/* Mixins */
+// Mixins
 
-/* Px to Rem */
+// Px to Rem
 
 rem(size)
   return 1rem * size / root-font-size
 
-/* Media mixin */
+// Media mixin
 
 md()
   @media screen and (max-width $md)
@@ -45,7 +45,7 @@ xxs()
   @media screen and (max-width $xxs)
     {block}
 
-/* Font-Face */
+// Font-Face
 
 font-url(file)
   return "fonts/" + file
@@ -59,7 +59,7 @@ font-face(family, style, weight, file)
     url(font-url(file + ".woff")) format("woff"),
     url(font-url(file + ".ttf")) format("ttf")
 
-/* Adaptive square */
+// Adaptive square
 
 square()
   overflow hidden
@@ -68,7 +68,7 @@ square()
     padding-top 100%
     float left
 
-/* Break-word */
+// Break-word
 
 break-word()
   overflow-wrap break-word
