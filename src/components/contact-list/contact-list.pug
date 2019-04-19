@@ -1,4 +1,4 @@
-mixin contact-list
+mixin contact-list({mail, phone, website})
   .contact-list
     .contact-list__row
       .contact-list__title address
@@ -7,17 +7,17 @@ mixin contact-list
       .contact-list__title e-mail
       .contact-list__text
         a.contact-list__link(
-            href="mailto: contact@domain.com"
-          ) contact@domain.com
+            href=`mailto: ${mail}`
+          )= mail
     .contact-list__row
       .contact-list__title phone
       .contact-list__text
-        a.contact-list__link(href="tel: 555-555-555") 555-555-555
+        a.contact-list__link(href=`tel: ${phone}`)= phone
     .contact-list__row
       .contact-list__title website
       .contact-list__text
         a.contact-list__link(
-            href="http://www.yourweb.com"
+            href=`http://${website}`
             rel="noopener noreferrer"
             target="_blank"
-          ) www.yourweb.com
+          )= website

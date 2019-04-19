@@ -5,4 +5,8 @@ mixin contact
   section.contact
     +title("contact", "phone")
     .contact__contact-list-container
-      +contact-list
+      +contact-list({
+        mail: "contact@domain.com",
+        phone: "555-555-555",
+        website: "www.yourweb.com"
+      })
