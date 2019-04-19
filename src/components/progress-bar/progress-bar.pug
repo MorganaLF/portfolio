@@ -15,4 +15,4 @@ mixin progressBar(options)
               span.progress-bar__indicator_rounded
         else
           .progress-bar__indicator-container.progress-bar__indicator-container_solid
-            .progress-bar__indicator_solid.progress-bar__indicator_full(style="width:" + barItem.completedProgress + "%")
+            .progress-bar__indicator_solid.progress-bar__indicator_full(style=`width:${barItem.completedProgress}%`)
