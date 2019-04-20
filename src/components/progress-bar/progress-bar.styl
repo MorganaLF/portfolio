@@ -1,6 +1,7 @@
 @import "../../styles/variables.styl"
 
 .progress-bar
+
   &__title
     margin 0 0 rem(5px)
     font-size rem(27px)
@@ -8,19 +9,26 @@
     text-align center
     text-transform uppercase
     break-word()
+
     &_left-justified
       margin-bottom rem(11px)
       text-align left
+
   &__indicator-container
     margin-bottom rem(24px)
+
     &_solid
       height rem(24px)
       background grey
+
     &_rounded
       display flex
+
   &__indicator
+
     &_solid
       height 100%
+
     &_rounded
       width 5.55%
       flex-shrink 0
@@ -28,10 +36,13 @@
       border-radius 50%
       background grey
       square()
+
       &:first-child
         margin-left 0
+
       &:last-child
         margin-right 0
+
     &_full
       background accent-color
 

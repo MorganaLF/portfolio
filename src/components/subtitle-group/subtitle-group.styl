@@ -4,6 +4,7 @@
   display flex
   align-items center
   break-word()
+
   &__icon
     width rem(76px)
     flex-shrink 0
@@ -11,23 +12,31 @@
     background url("images/phone-icon.png") no-repeat center center
     background-size contain
     square()
+
     &_with-big-indent
       margin-right rem(22px)
       +sm()
         margin-right rem(10px)
+
     &_with-user
       background-image url("images/profile-icon.png")
+
     &_with-phone
       background-image url("images/phone-icon.png")
+
     &_with-bulb
       background-image url("images/skills-icon.png")
+
     &_with-star
       background-image url("images/education-icon.png")
+
     &_with-bag
       width rem(79px)
       background-image url("images/experience-icon.png")
+
     &_with-computer
       background-image url("images/software-icon.png")
+
   &__title
     max-width 70%
     margin rem(6px) rem(9px) 0 0
@@ -35,6 +44,7 @@
     font-weight 600
     text-transform uppercase
     color accent-color
+
   &__line
     width 100%
     border-bottom rem(6px) solid accent-color

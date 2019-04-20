@@ -2,10 +2,12 @@
 
 .unordered-list
   list-style-type none
+
   &__item
     position relative
     margin-bottom rem(16px)
     padding-left rem(42px)
+
     &:before
       content ""
       display block
@@ -17,20 +19,25 @@
       border-radius 50%
       background black
       line-height 0
+
     &-title
     &-date
     &-subtitle
       display inline-block
       font-size rem(27px)
+
     &-title
       margin 0 rem(11px) rem(2px) 0
       font-weight 600
       line-height 1.2
       text-transform uppercase
+
       &_accent
         color accent-color
+
     &-date
       color light-black
+
     &-subtitle
       margin-bottom rem(4px)
       font-weight 400

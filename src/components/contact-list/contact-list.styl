@@ -5,24 +5,28 @@
   width 100%
   table-layout fixed
   break-word()
+
   &__row
     display table-row
+
   &__title
   &__text
     display table-cell
     font-size rem(21px)
     padding-bottom rem(32px)
+
   &__title
     width 31%
     padding 0 rem(15px) rem(32px) 0
     font-weight 600
     text-transform uppercase
     color accent-color
-  &__link,
-    &:visited
+
+  &__link
     color inherit
     text-decoration none
     transition 0.2s ease-in-out
+
     &:hover
       color accent-color
 
