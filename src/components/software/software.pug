@@ -3,10 +3,10 @@ include ../progress-bar/progress-bar
 
 mixin software
   section.software
-    +title("software", "computer", true)
+    +subtitle-group("software", "computer", true)
     .software__progress-bar-container
       .software__progress-bar-col
-        +progressBar({
+        +progress-bar({
           leftAlign: true,
           barItems: [
             {
@@ -24,7 +24,7 @@ mixin software
           ]
         })
       .software__progress-bar-col
-        +progressBar({
+        +progress-bar({
           leftAlign: true,
           barItems: [
             {

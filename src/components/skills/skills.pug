@@ -3,9 +3,9 @@ include ../progress-bar/progress-bar
 
 mixin skills
   section.skills
-    +title("skills", "bulb")
+    +subtitle-group("skills", "bulb")
     .skills__progress-bar-container
-      +progressBar({
+      +progress-bar({
         type: "circles",
         progressLength: 12,
         barItems: [

@@ -3,9 +3,9 @@ include ../unordered-list/unordered-list
 
 mixin education
   section.education
-    +title("education", "star", true)
+    +subtitle-group("education", "star", true)
     .education__unordered-list-container
-      +unorderedList({
+      +unordered-list({
         isColoredTitle: true,
         listItems: [
           {
