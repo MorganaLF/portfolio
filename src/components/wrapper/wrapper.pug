@@ -8,7 +8,7 @@ include ../software/software
 
 mixin wrapper
   main.wrapper
-    .wrapper__column.wrapper__column_4-size
+    .wrapper__column.wrapper__column_left
       .wrapper__personal-data-container
         +personal-data({
           imgSrc: "images/photo.jpg",
@@ -24,7 +24,7 @@ mixin wrapper
         })
       +contact
       +skills
-    .wrapper__column.wrapper__column_6-size
+    .wrapper__column.wrapper__column_right
       +education
       +experience
       +software
