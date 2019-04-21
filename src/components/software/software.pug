@@ -3,7 +3,7 @@ include ../progress-bar/progress-bar
 
 mixin software
   section.software
-    +subtitle-group("software", "computer", true)
+    +subtitle-group({ titleText: "software", icon: "computer", isBigIndent: true})
     .software__progress-bar-container
       .software__progress-bar-col
         +progress-bar({

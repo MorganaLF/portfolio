@@ -3,7 +3,7 @@ include ../progress-bar/progress-bar
 
 mixin skills
   section.skills
-    +subtitle-group("skills", "bulb")
+    +subtitle-group({titleText: "skills", icon: "bulb"})
     .skills__progress-bar-container
       +progress-bar({
         type: "circles",

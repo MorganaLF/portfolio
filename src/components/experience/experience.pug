@@ -3,7 +3,7 @@ include ../unordered-list/unordered-list
 
 mixin experience
   section.experience
-    +subtitle-group("experience", "bag", true)
+    +subtitle-group({titleText: "experience", icon: "bag", isColoredTitle: true})
     .experience__unordered-list-container
       +unordered-list({
         listItems: [

@@ -3,7 +3,7 @@ include ../unordered-list/unordered-list
 
 mixin education
   section.education
-    +subtitle-group("education", "star", true)
+    +subtitle-group({titleText: "education", icon: "star", isBigIndent: true})
     .education__unordered-list-container
       +unordered-list({
         isColoredTitle: true,

@@ -3,7 +3,7 @@ include ../contact-list/contact-list
 
 mixin contact
   section.contact
-    +subtitle-group("contact", "phone")
+    +subtitle-group({titleText: "contact", icon: "phone"})
     .contact__contact-list-container
       +contact-list({
         mail: "contact@domain.com",

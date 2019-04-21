@@ -2,6 +2,6 @@ include ../subtitle-group/subtitle-group
 
 mixin profile({text, importantText})
   section.profile
-    +subtitle-group("profile", "user")
+    +subtitle-group({titleText: "profile", icon: "user"})
     p.main-text.profile__text= text
       span.main-text_bold= importantText

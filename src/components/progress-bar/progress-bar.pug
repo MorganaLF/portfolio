@@ -1,18 +1,19 @@
-mixin progress-bar(options)
+mixin progress-bar({type, progressLength, barItems, leftAlign})
   .progress-bar
-    each barItem in options.barItems
+    each barItem in barItems
+      - const {title, completedProgress} = barItem;
       .progress-bar__item
         h3.progress-bar__title(
-                  class=options.leftAlign ?
+                  class=leftAlign ?
                   "progress-bar__title_left-justified" : ""
-                  )= barItem.title
-        if options.type === "circles"
+                  )= title
+        if type === "circles"
           .progress-bar__indicator-container.progress-bar__indicator-container_rounded
-            - for (var i = 0; i < options.progressLength; i++)
-            if i < barItem.completedProgress
+            - for (let i = 0; i < progressLength; i++)
+            if i < completedProgress
               span.progress-bar__indicator_rounded.progress-bar__indicator_full
             else
               span.progress-bar__indicator_rounded
         else
           .progress-bar__indicator-container.progress-bar__indicator-container_solid
-            .progress-bar__indicator_solid.progress-bar__indicator_full(style=`width:${barItem.completedProgress}%`)
+            .progress-bar__indicator_solid.progress-bar__indicator_full(style=`width:${completedProgress}%`)
