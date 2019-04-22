@@ -1,29 +1,8 @@
 include ../subtitle-group/subtitle-group
 include ../progress-bar/progress-bar
 
-mixin skills
+mixin skills({ titleOptions, progressBarOptions })
   section.skills
-    +subtitle-group({titleText: "skills", icon: "bulb"})
+    +subtitle-group(titleOptions)
     .skills__progress-bar-container
-      +progress-bar({
-        type: "circles",
-        progressLength: 12,
-        barItems: [
-          {
-            title: "creative",
-            completedProgress: 9
-          },
-          {
-            title: "teamwork",
-            completedProgress: 11
-          },
-          {
-            title: "innovate",
-            completedProgress: 6
-          },
-          {
-            title: "communication",
-            completedProgress: 11
-          }
-        ]
-      })
+      +progress-bar(progressBarOptions)

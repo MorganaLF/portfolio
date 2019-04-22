@@ -1,41 +1,8 @@
 include ../subtitle-group/subtitle-group
 include ../unordered-list/unordered-list
 
-mixin experience
+mixin experience({ titleOptions, unorderedListOptions })
   section.experience
-    +subtitle-group({titleText: "experience", icon: "bag", isBigIndent: true})
+    +subtitle-group(titleOptions)
     .experience__unordered-list-container
-      +unordered-list({
-        listItems: [
-          {
-            "title": "company name",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "your job here",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          },
-          {
-            "title": "company name",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "your job here",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          },
-          {
-            "title": "company name",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "your job here",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          }
-        ]
-      })
+      +unordered-list(unorderedListOptions)

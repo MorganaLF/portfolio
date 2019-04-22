@@ -1,43 +1,11 @@
 include ../subtitle-group/subtitle-group
 include ../progress-bar/progress-bar
 
-mixin software
+mixin software({ titleOptions, leftColProgressBarOptions, rightColProgressBarOptions })
   section.software
-    +subtitle-group({ titleText: "software", icon: "computer", isBigIndent: true})
+    +subtitle-group(titleOptions)
     .software__progress-bar-container
       .software__progress-bar-col
-        +progress-bar({
-          leftAlign: true,
-          barItems: [
-            {
-              title: "photoshop",
-              completedProgress: 91
-            },
-            {
-              title: "illustrator",
-              completedProgress: 71
-            },
-            {
-              title: "indesign",
-              completedProgress: 56.5
-            }
-          ]
-        })
+        +progress-bar(leftColProgressBarOptions)
       .software__progress-bar-col
-        +progress-bar({
-          leftAlign: true,
-          barItems: [
-            {
-              title: "dreamweaver",
-              completedProgress: 84
-            },
-            {
-              title: "after effects",
-              completedProgress: 62
-            },
-            {
-              title: "html&css3",
-              completedProgress: 92
-            }
-          ]
-        })
+        +progress-bar(rightColProgressBarOptions)

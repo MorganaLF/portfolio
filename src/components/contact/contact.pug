@@ -1,12 +1,8 @@
 include ../subtitle-group/subtitle-group
 include ../contact-list/contact-list
 
-mixin contact
+mixin contact({ titleOptions, contactListOptions })
   section.contact
-    +subtitle-group({titleText: "contact", icon: "phone"})
+    +subtitle-group(titleOptions)
     .contact__contact-list-container
-      +contact-list({
-        mail: "contact@domain.com",
-        phone: "555-555-555",
-        website: "www.yourweb.com"
-      })
+      +contact-list(contactListOptions)

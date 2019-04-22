@@ -1,52 +1,8 @@
 include ../subtitle-group/subtitle-group
 include ../unordered-list/unordered-list
 
-mixin education
+mixin education({ titleOptions, unorderedListOptions })
   section.education
-    +subtitle-group({titleText: "education", icon: "star", isBigIndent: true})
+    +subtitle-group(titleOptions)
     .education__unordered-list-container
-      +unordered-list({
-        isColoredTitle: true,
-        listItems: [
-          {
-            "title": "master degree",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "university name",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          },
-          {
-            "title": "master degree",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "university name",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          },
-          {
-            "title": "master degree",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "university name",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          },
-          {
-            "title": "master degree",
-            "date": "Feb 2011 - Jun 2014",
-            "subtitle": "university name",
-            "text": "Lorem ipsum dolor sit amet, consectetuer " +
-                "adipiscing elit. Aenean commodo ligula eget dolor. " +
-                "Aenean massa. Cum sociis natoque penatibus et magnis " +
-                "dis parturient montes, nascetur ridiculus mus. " +
-                "Donec quam felis, ultricies nec, pellentesque."
-          }
-        ]
-      })
+      +unordered-list(unorderedListOptions)

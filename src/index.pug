@@ -18,5 +18,174 @@ html
     link(rel="manifest" href="site.webmanifest")
     link(rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5")
   body
-    +wrapper
+    +wrapper({
+      personalDataOptions: {
+        imgSrc: "images/photo.jpg",
+        alt: "Personal photo",
+        name: "name here",
+        surname: "surname",
+        profession: "graphic designer"
+      },
+      profileOptions: {
+        titleOptions: {titleText: "profile", icon: "user"},
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu",
+        importantText: "pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque."
+      },
+      contactOptions: {
+        titleOptions: {titleText: "contact", icon: "phone"},
+        contactListOptions: {
+          address: "Main Street, City.",
+          mail: "contact@domain.com",
+          phone: "555-555-555",
+          website: "www.yourweb.com"
+        }
+      },
+      skillsOptions: {
+        titleOptions: {titleText: "skills", icon: "bulb"},
+        progressBarOptions: {
+          type: "circles",
+          progressLength: 12,
+          barItems: [
+            {
+              title: "creative",
+              completedProgress: 9
+            },
+            {
+              title: "teamwork",
+              completedProgress: 11
+            },
+            {
+              title: "innovate",
+              completedProgress: 6
+            },
+            {
+              title: "communication",
+              completedProgress: 11
+            }
+          ]
+        }
+      },
+      educationOptions: {
+        titleOptions: {titleText: "education", icon: "star", isBigIndent: true},
+        unorderedListOptions: {
+          isColoredTitle: true,
+          listItems: [
+            {
+              title: "master degree",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "university name",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            },
+            {
+              title: "master degree",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "university name",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            },
+            {
+              title: "master degree",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "university name",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            },
+            {
+              title: "master degree",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "university name",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            }
+          ]
+        }
+      },
+      experienceOptions: {
+        titleOptions: {titleText: "experience", icon: "bag", isBigIndent: true},
+        unorderedListOptions: {
+          listItems: [
+            {
+              title: "company name",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "your job here",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            },
+            {
+              title: "company name",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "your job here",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            },
+            {
+              title: "company name",
+              date: "Feb 2011 - Jun 2014",
+              subtitle: "your job here",
+              text: "Lorem ipsum dolor sit amet, consectetuer " +
+                "adipiscing elit. Aenean commodo ligula eget dolor. " +
+                "Aenean massa. Cum sociis natoque penatibus et magnis " +
+                "dis parturient montes, nascetur ridiculus mus. " +
+                "Donec quam felis, ultricies nec, pellentesque."
+            }
+          ]
+        }
+      },
+      softwareOptions: {
+        titleOptions: {titleText: "software", icon: "computer", isBigIndent: true},
+        leftColProgressBarOptions: {
+          leftAlign: true,
+          barItems: [
+            {
+              title: "photoshop",
+              completedProgress: 91
+            },
+            {
+              title: "illustrator",
+              completedProgress: 71
+            },
+            {
+              title: "indesign",
+              completedProgress: 56.5
+            }
+          ]
+        },
+        rightColProgressBarOptions: {
+          leftAlign: true,
+          barItems: [
+            {
+              title: "dreamweaver",
+              completedProgress: 84
+            },
+            {
+              title: "after effects",
+              completedProgress: 62
+            },
+            {
+              title: "html&css3",
+              completedProgress: 92
+            }
+          ]
+        }
+      }
+    })
 

@@ -1,7 +1,7 @@
 include ../subtitle-group/subtitle-group
 
-mixin profile({text, importantText})
+mixin profile({ titleOptions, text, importantText })
   section.profile
-    +subtitle-group({titleText: "profile", icon: "user"})
+    +subtitle-group(titleOptions)
     p.profile__text= text
       span.profile__text.profile__text_bold= importantText

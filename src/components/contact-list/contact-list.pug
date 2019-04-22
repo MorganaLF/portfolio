@@ -1,8 +1,8 @@
-mixin contact-list({mail, phone, website})
+mixin contact-list({address, mail, phone, website})
   .contact-list
     .contact-list__row
       .contact-list__title address
-      .contact-list__text Main Street, City.
+      .contact-list__text= address
     .contact-list__row
       .contact-list__title e-mail
       .contact-list__text
