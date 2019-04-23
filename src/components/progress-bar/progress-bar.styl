@@ -23,25 +23,25 @@
     &_rounded
       display flex
 
-  &__indicator
-
-    &_solid
-      height 100%
-
-    &_rounded
-      width 5.55%
-      flex-shrink 0
-      margin 0 1.5%
-      border-radius 50%
-      background grey
-      square()
-
-      &:first-child
-        margin-left 0
-
-      &:last-child
-        margin-right 0
+  &__solid-indicator
+    height 100%
 
     &_full
       background accent-color
 
+  &__rounded-indicator
+    width 5.55%
+    flex-shrink 0
+    margin 0 1.5%
+    border-radius 50%
+    background grey
+    square()
+
+    &:first-child
+      margin-left 0
+
+    &:last-child
+      margin-right 0
+
+    &_full
+      background accent-color

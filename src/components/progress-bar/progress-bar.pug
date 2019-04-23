@@ -11,9 +11,9 @@ mixin progress-bar({ type, progressLength, barItems, leftAlign })
           .progress-bar__indicator-container.progress-bar__indicator-container_rounded
             - for (let i = 0; i < progressLength; i++)
             if i < completedProgress
-              span.progress-bar__indicator_rounded.progress-bar__indicator_full
+              span.progress-bar__rounded-indicator.progress-bar__rounded-indicator_full
             else
-              span.progress-bar__indicator_rounded
+              span.progress-bar__rounded-indicator
         else
           .progress-bar__indicator-container.progress-bar__indicator-container_solid
-            .progress-bar__indicator_solid.progress-bar__indicator_full(style=`width:${completedProgress}%`)
+            .progress-bar__solid-indicator.progress-bar__solid-indicator_full(style=`width:${completedProgress}%`)
