@@ -1,9 +1,9 @@
 # Resume
 https://morganalf.github.io/resume/dist/
 
-## Installation
+## Clone repository
 ``` 
-npm install
+git clone https://github.com/MorganaLF/resume.git
 ```
 
 ## Development
