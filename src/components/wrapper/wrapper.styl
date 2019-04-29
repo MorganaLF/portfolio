@@ -1,16 +1,17 @@
 @import "../../styles/variables.styl"
 
 .wrapper
-  display flex
-  width: 100%
-  max-width 1232px
-  min-width: 320px
-  margin 0 auto
-  padding 78px 0
+  &__blocks-container
+    display flex
+    width: 100%
+    max-width 1232px
+    min-width: 320px
+    margin 0 auto
+    padding 78px 0
 
-  +sm()
-    flex-direction column
-    align-items center
+    +sm()
+      flex-direction column
+      align-items center
 
   &__column
     flex-shrink 0
@@ -39,4 +40,8 @@
 
   &__profile-container
     padding-bottom 46px
+
+  &__skills-container
+    +md()
+      margin-bottom 48px
 
