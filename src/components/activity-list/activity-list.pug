@@ -1,0 +1,13 @@
+mixin activity-list({ isColoredTitle, listItems })
+  ul.activity-list
+    each listItem in listItems
+      - const {title, date, subtitle, text} = listItem;
+      li.activity-list__item
+        span.activity-list__item-title(
+          class=isColoredTitle ? "activity-list__item-title_accent" : ""
+        )= title
+        span.activity-list__item-date= `// ${date}`
+        span.activity-list__item-subtitle= subtitle
+        p.activity-list__item-paragraph= text
+
+
