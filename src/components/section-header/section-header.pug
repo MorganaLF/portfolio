@@ -1,0 +1,8 @@
+mixin section-header({ titleText, icon, isBigIndent })
+  header.section-header
+    .section-header__icon(
+      class=`section-header__icon_with-${icon}`
+      class=isBigIndent ? "section-header__icon_with-big-indent" : ""
+    )
+    h2.section-header__title= titleText
+    .section-header__line

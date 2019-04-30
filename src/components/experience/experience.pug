@@ -1,8 +1,8 @@
-include ../subtitle-group/subtitle-group
+include ../section-header/section-header
 include ../unordered-list/unordered-list
 
 mixin experience({ titleOptions, unorderedListOptions })
   section.experience
-    +subtitle-group(titleOptions)
+    +section-header(titleOptions)
     .experience__content
       +unordered-list(unorderedListOptions)

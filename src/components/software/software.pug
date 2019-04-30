@@ -1,9 +1,9 @@
-include ../subtitle-group/subtitle-group
+include ../section-header/section-header
 include ../progress-bar/progress-bar
 
 mixin software({ titleOptions, leftBarItems, rightBarItems })
   section.software
-    +subtitle-group(titleOptions)
+    +section-header(titleOptions)
     .software__lists
       ul.software__list
         each barItem in leftBarItems

@@ -1,7 +1,7 @@
-include ../subtitle-group/subtitle-group
+include ../section-header/section-header
 
 mixin profile({ titleOptions, text, importantText })
   section.profile
-    +subtitle-group(titleOptions)
+    +section-header(titleOptions)
     p.profile__text= text
       span.profile__important-text= importantText

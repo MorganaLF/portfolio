@@ -1,9 +1,9 @@
-include ../subtitle-group/subtitle-group
+include ../section-header/section-header
 include ../discrete-bar/discrete-bar
 
 mixin skills({ titleOptions, barItems })
   section.skills
-    +subtitle-group(titleOptions)
+    +section-header(titleOptions)
     ul.skills__list
       each barItem in barItems
         - let { title, value } = barItem;
