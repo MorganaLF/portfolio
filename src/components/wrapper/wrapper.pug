@@ -14,10 +14,14 @@ mixin wrapper({ personalDataOptions, profileOptions, contactOptions, skillsOptio
           +personal-data(personalDataOptions)
         .wrapper__profile
           +profile(profileOptions)
-        +contact(contactOptions)
+        .wrapper__contact
+          +contact(contactOptions)
         .wrapper__skills
           +skills(skillsOptions)
       .wrapper__column.wrapper__column_right
-        +education(educationOptions)
-        +experience(experienceOptions)
-        +software(softwareOptions)
+        .wrapper__education
+          +education(educationOptions)
+        .wrapper__experience
+          +experience(experienceOptions)
+        .wrapper__software
+          +software(softwareOptions)
