@@ -7,7 +7,7 @@ const DelWebpackPlugin = require('del-webpack-plugin');
 module.exports = (env, options) => {
   let production = options.mode === 'production';
   let cssMap = !production;
-  let publicDir = production ? 'https://morganalf.github.io/resume/dist/' : '/';
+  let publicDir = production ? 'https://morganalf.github.io/resume/' : '/';
 
   return {
     entry: './src/index.js',
