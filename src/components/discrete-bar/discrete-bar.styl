@@ -1,0 +1,21 @@
+@import "../../styles/variables.styl"
+
+.discrete-bar
+  display flex
+
+  &__indicator
+    width 5.55%
+    flex-shrink 0
+    margin 0 1.5%
+    border-radius 50%
+    background grey
+    square()
+
+    &:first-child
+      margin-left 0
+
+    &:last-child
+      margin-right 0
+
+    &_full
+      background accent-color

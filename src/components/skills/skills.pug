@@ -1,8 +1,12 @@
 include ../subtitle-group/subtitle-group
-include ../progress-bar/progress-bar
+include ../discrete-bar/discrete-bar
 
-mixin skills({ titleOptions, progressBarOptions })
+mixin skills({ titleOptions, barItems })
   section.skills
     +subtitle-group(titleOptions)
-    .skills__progress-bar-container
-      +progress-bar(progressBarOptions)
+    ul.skills__list
+      each barItem in barItems
+        - let { title, value } = barItem;
+          li.skills__list-item
+            h3.skills__list-item-title= title
+            +discrete-bar({ value })

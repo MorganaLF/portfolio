@@ -1,30 +1,40 @@
 @import "../../styles/variables.styl"
 
 .software
-  &__progress-bar
+  &__lists
+    margin 28px 0 0 9px
+    display flex
 
-    &-container
-      margin 28px 0 0 9px
-      display flex
+    +xs()
+      flex-direction column
+      align-items center
+
+  &__list
+    width 50%
+    list-style-type none
+
+    +xs()
+      width 100%
+
+    &:first-child
+      margin-right 36px
 
       +xs()
-        flex-direction column
-        align-items center
+        margin-right 0
 
-    &-col
-      width 50%
+    &:last-child
+      margin-left 36px
 
       +xs()
-        width 100%
+        margin-left 0
 
-      &:first-child
-        margin-right 36px
+  &__list-item
+    margin-bottom 24px
 
-        +xs()
-          margin-right 0
-
-      &:last-child
-        margin-left 36px
-
-        +xs()
-          margin-left 0
+  &__list-item-title
+    margin-bottom 11px
+    font-size 27px
+    font-weight 400
+    text-align left
+    text-transform uppercase
+    break-word()

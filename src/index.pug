@@ -42,28 +42,24 @@ html
       },
       skillsOptions: {
         titleOptions: {titleText: "skills", icon: "bulb"},
-        progressBarOptions: {
-          type: "circles",
-          progressLength: 12,
-          barItems: [
-            {
-              title: "creative",
-              completedProgress: 9
-            },
-            {
-              title: "teamwork",
-              completedProgress: 11
-            },
-            {
-              title: "innovate",
-              completedProgress: 6
-            },
-            {
-              title: "communication",
-              completedProgress: 11
-            }
-          ]
-        }
+        barItems: [
+          {
+            title: "creative",
+            value: 9
+          },
+          {
+            title: "teamwork",
+            value: 11
+          },
+          {
+            title: "innovate",
+            value: 6
+          },
+          {
+            title: "communication",
+            value: 11
+          }
+        ]
       },
       educationOptions: {
         titleOptions: {titleText: "education", icon: "star", isBigIndent: true},
@@ -152,40 +148,34 @@ html
       },
       softwareOptions: {
         titleOptions: {titleText: "software", icon: "computer", isBigIndent: true},
-        leftColProgressBarOptions: {
-          leftAlign: true,
-          barItems: [
-            {
-              title: "photoshop",
-              completedProgress: 91
-            },
-            {
-              title: "illustrator",
-              completedProgress: 71
-            },
-            {
-              title: "indesign",
-              completedProgress: 56.5
-            }
-          ]
-        },
-        rightColProgressBarOptions: {
-          leftAlign: true,
-          barItems: [
-            {
-              title: "dreamweaver",
-              completedProgress: 84
-            },
-            {
-              title: "after effects",
-              completedProgress: 62
-            },
-            {
-              title: "html&css3",
-              completedProgress: 92
-            }
-          ]
-        }
+        leftBarItems: [
+          {
+            title: "photoshop",
+            completedProgress: 91
+          },
+          {
+            title: "illustrator",
+            completedProgress: 71
+          },
+          {
+            title: "indesign",
+            completedProgress: 56.5
+          }
+        ],
+        rightBarItems: [
+          {
+            title: "dreamweaver",
+            completedProgress: 84
+          },
+          {
+            title: "after effects",
+            completedProgress: 62
+          },
+          {
+            title: "html&css3",
+            completedProgress: 92
+          }
+        ]
       }
     })
 

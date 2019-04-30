@@ -1,11 +1,19 @@
 include ../subtitle-group/subtitle-group
 include ../progress-bar/progress-bar
 
-mixin software({ titleOptions, leftColProgressBarOptions, rightColProgressBarOptions })
+mixin software({ titleOptions, leftBarItems, rightBarItems })
   section.software
     +subtitle-group(titleOptions)
-    .software__progress-bar-container
-      .software__progress-bar-col
-        +progress-bar(leftColProgressBarOptions)
-      .software__progress-bar-col
-        +progress-bar(rightColProgressBarOptions)
+    .software__lists
+      ul.software__list
+        each barItem in leftBarItems
+          - let { title, completedProgress } = barItem;
+            li.software__list-item
+              h3.software__list-item-title= title
+              +progress-bar({ completedProgress })
+      ul.software__list
+        each barItem in rightBarItems
+          - let { title, completedProgress } = barItem;
+            li.software__list-item
+              h3.software__list-item-title= title
+              +progress-bar({ completedProgress })

@@ -1,0 +1,7 @@
+mixin discrete-bar({value, maxValue = 12})
+  .discrete-bar
+    - for (let i = 0; i < maxValue; i++)
+      if i < value
+        span.discrete-bar__indicator.discrete-bar__indicator_full
+      else
+        span.discrete-bar__indicator
