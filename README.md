@@ -1,5 +1,5 @@
 # Resume
-https://morganalf.github.io/resume/dist/
+https://morganalf.github.io/resume/
 
 ## Clone repository
 ``` 
