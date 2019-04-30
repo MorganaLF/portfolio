@@ -8,14 +8,14 @@ include ../software/software
 
 mixin wrapper({ personalDataOptions, profileOptions, contactOptions, skillsOptions, educationOptions, experienceOptions, softwareOptions })
   main.wrapper
-    .wrapper__blocks-container
+    .wrapper__blocks
       .wrapper__column.wrapper__column_left
-        .wrapper__personal-data-container
+        .wrapper__personal-data
           +personal-data(personalDataOptions)
-        .wrapper__profile-container
+        .wrapper__profile
           +profile(profileOptions)
         +contact(contactOptions)
-        .wrapper__skills-container
+        .wrapper__skills
           +skills(skillsOptions)
       .wrapper__column.wrapper__column_right
         +education(educationOptions)
