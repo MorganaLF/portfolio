@@ -130,6 +130,16 @@ module.exports = (env, options) => {
           flatten: true
         },
         {
+          from: './src/images/**/*.jpg',
+          to: './images',
+          flatten: true
+        },
+        {
+          from: './src/images/**/*.png',
+          to: './images',
+          flatten: true
+        },
+        {
           from: './src/favicons/**/*.*',
           to: './',
           flatten: true
