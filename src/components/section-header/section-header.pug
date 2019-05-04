@@ -1,4 +1,11 @@
 mixin section-header({ titleText, icon, isBigIndent })
+  -
+    const icons = ['user', 'phone', 'bulb', 'star', 'bag', 'computer'];
+
+    if (icons.indexOf(icon) === -1) {
+      icon = 'bag';
+    }
+
   header.section-header
     .section-header__icon(
       class=`section-header__icon_with-${icon}`
