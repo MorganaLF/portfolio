@@ -120,22 +120,7 @@ module.exports = (env, options) => {
           to: './fonts'
         },
         {
-          from: './src/components/**/*.jpg',
-          to: './images',
-          flatten: true
-        },
-        {
-          from: './src/components/**/*.png',
-          to: './images',
-          flatten: true
-        },
-        {
-          from: './src/images/**/*.jpg',
-          to: './images',
-          flatten: true
-        },
-        {
-          from: './src/images/**/*.png',
+          from: './src/+(components|images)/*.+(jpg|png)',
           to: './images',
           flatten: true
         },
