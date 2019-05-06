@@ -1,14 +1,21 @@
 mixin section-header({ titleText, icon, isBigIndent })
   -
-    const icons = ['user', 'phone', 'bulb', 'star', 'bag', 'computer'];
+    const icons = {
+      profile: 'user',
+      contact: 'phone',
+      skills: 'bulb',
+      education: 'star',
+      experience: 'bag',
+      software: 'computer'
+    };
 
-    if (icons.indexOf(icon) === -1) {
-      icon = 'bag';
+    if (!icons[icon]) {
+      icons[icon] = 'bag';
     }
 
   header.section-header
     .section-header__icon(
-      class=`section-header__icon_with-${icon}`
+      class=`section-header__icon_with-${icons[icon]}`
       class=isBigIndent ? "section-header__icon_with-big-indent" : ""
     )
     h2.section-header__title= titleText
