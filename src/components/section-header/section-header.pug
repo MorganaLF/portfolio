@@ -9,13 +9,11 @@ mixin section-header({ titleText, icon, isBigIndent })
       software: 'computer'
     };
 
-    if (!icons[icon]) {
-      icons[icon] = 'bag';
-    }
+    const defaultIcon = 'bag';
 
   header.section-header
     .section-header__icon(
-      class=`section-header__icon_with-${icons[icon]}`
+      class=`section-header__icon_with-${icons[icon] || defaultIcon}`
       class=isBigIndent ? "section-header__icon_with-big-indent" : ""
     )
     h2.section-header__title= titleText
