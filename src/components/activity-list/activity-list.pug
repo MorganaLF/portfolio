@@ -1,6 +1,6 @@
-mixin activity-list({ isColoredTitle, listItems })
+mixin activity-list({ isColoredTitle, activityListItems })
   ul.activity-list
-    each listItem in listItems
+    each listItem in activityListItems
       - const {title, date, subtitle, text} = listItem;
       li.activity-list__item
         span.activity-list__item-title(
